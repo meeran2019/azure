@@ -23,7 +23,7 @@ Resource Groups:
 
 Resources:
     It is region specific.
-
+    It is of any resources like virtual machine, aks etc.
 
 Azure Resource Manager:
     It act as interface between user and azure.
@@ -41,3 +41,10 @@ Compare with AWS:
     3. Like AWS, in Azure also explicit DENY takes higher precedence than explicit ALLOW.
     4. Subscription is similar to accounts in aws. Subscription used to manage resources and rbac control.
 
+-------------------------------------------------------------------------------------------
+
+PRACTICAL:
+    If big organization, can generally use different accounts for different region like dev, qa & prod.
+    If organization, have single account then create multiple subscription based on project, team, environment etc to isolate.
+
+    
