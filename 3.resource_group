@@ -11,6 +11,7 @@ Subscription:
     It is similar to AWS accounts.
     It contains resources and can manage RBAC.
     It is global level.
+    It has limit and quotas on the resources.
     
 Resource Groups:
     It helps to group the resource.
