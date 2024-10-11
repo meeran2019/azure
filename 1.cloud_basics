@@ -49,6 +49,18 @@ Disaster recovery:
 Fault Tolerance:
     Ability system continue working even if few components fail.
 
+IAAS:
+    infrastructure as a service
+    ex: compute, storage, network etc.
+
+PAAS:
+    Platform as a service
+    ex: AKS
+
+SAAS:
+    Software as a service
+    ex: subscription based services.
+
 
 
 
