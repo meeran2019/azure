@@ -1,1 +1,43 @@
-Resource
+
+Management group -> Subscriptions -> Resource group -> Resources
+
+Management Group:
+    It contains multiple subscriptions.
+    Can create heirarchy of management group.
+    It is similar to AWS organization.
+    It is global level.
+
+Subscription:
+    It is similar to AWS accounts.
+    It contains resources and can manage RBAC.
+    It is global level.
+    
+Resource Groups:
+    It helps to group the resource.
+    It is mandatory to create any resource along with subscription.
+    In AWS, similar to resource group based on tags but not mandatory.
+    It supports RBAC.
+    It is scoped to subscription level.
+    Azure provides the ability to analyze and view costs at the resource group level, even though billing is aggregated at the subscription level.
+    It is region specific.
+
+Resources:
+    It is region specific.
+
+
+Azure Resource Manager:
+    It act as interface between user and azure.
+    It is responsible for all the request from api, console, cli.
+    It manages all the above resources.
+    Resource is outcome of this service.
+    A role assigned at the resource group level cannot be viewed from the subscription level.
+    While roles can be inherited from higher scopes (like management groups), you won't see lower-scope assignments at higher levels.
+
+-------------------------------------------------------------------------------------------
+
+Compare with AWS:
+    1. Like AWS, Azure also by default have DENY permission.
+    2. In AWS, uses IAM roles and policies to give permission. In Azure, uses RBAC which is attached to different scope like management group, subscription etc and gets inherited.
+    3. Like AWS, in Azure also explicit DENY takes higher precedence than explicit ALLOW.
+    4. Subscription is similar to accounts in aws. Subscription used to manage resources and rbac control.
+
