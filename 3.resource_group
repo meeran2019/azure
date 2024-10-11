@@ -31,8 +31,7 @@ Azure Resource Manager:
     It is responsible for all the request from api, console, cli.
     It manages all the above resources.
     Resource is outcome of this service.
-    A role assigned at the resource group level cannot be viewed from the subscription level.
-    While roles can be inherited from higher scopes (like management groups), you won't see lower-scope assignments at higher levels.
+    A role assigned at specific scope cannot view from other scope.
 
 -------------------------------------------------------------------------------------------
 
