@@ -19,6 +19,7 @@ API (Application Programming Interface):
 Regions:
     It is collection of availability zone.
     It is available at country level for ex:us-east-1, us-west-2
+    It reduces latency and for compliance to keep data within that region
     
 Availability Zone:
     It is a datacenter.
