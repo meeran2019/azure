@@ -41,6 +41,7 @@ Compare with AWS:
     2. In AWS, uses IAM roles and policies to give permission. In Azure, uses RBAC which is attached to different scope like management group, subscription etc and gets inherited.
     3. Like AWS, in Azure also explicit DENY takes higher precedence than explicit ALLOW.
     4. Subscription is similar to accounts in aws. Subscription used to manage resources and rbac control.
+    5. Management group is similar to aws organization.
 
 -------------------------------------------------------------------------------------------
 
