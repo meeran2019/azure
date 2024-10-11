@@ -34,5 +34,20 @@ Scalability:
     How it scale dependsup on the load.
     Can be horizontal and vertical scaling.
 
-    
+Elasticity:
+    It is automatic or dynamic scaling.
+
+High Availability:
+    It is without system down.
+
+Disaster recovery:
+    What if system goes down? like backup and recovery.
+    To handle any failure like server down.
+    Failure can be any level of infrastructure.
+
+Fault Tolerance:
+    Ability system continue working even if few components fail.
+
+
+
 
