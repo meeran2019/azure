@@ -1,0 +1,27 @@
+
+In AWS, it is called as VPC (Virtual Privaye Cloud).
+In Azure, called as VNET (Virtual Network).
+It is region specific.
+
+Limit is 1000 vnet per subscription and 1024 subnets per vnet.
+
+CIDR, SUBNET, Network SG.
+
+Network Security Group:
+    It allows inbound/outbound rules.
+    Stateful.
+    
+Application Security Group:
+    It helps to group the VM.
+    Used within NSG to apply to group access.
+    For ex: In NSG, allows at subnet level. In ASG, group resource like application and allow only those to DB.
+
+Compare with AWS:
+    In AWS, similar concept of CIDR, Subnet.
+    Feature	                Azure Network Security Groups (NSGs)	AWS Security Groups (SG)	    AWS Network Access Control Lists (NACLs)
+    Level of Application	NIC and Subnet level	                Instance level	                Subnet level
+    Rules	                Allow/Deny rules with priority	        Allow rules only	            Allow/Deny rules with no priority
+    Statefulness	        Stateful (tracks connections)	        Stateful (tracks connections)	Stateless (no tracking of connections)
+
+    NSG does both security group and NACL roles.
+
