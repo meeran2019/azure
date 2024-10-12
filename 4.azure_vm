@@ -1,0 +1,33 @@
+
+Custom Data:
+    Data that passed to instance using cloud init.
+    Primarily used for Linux VMs, Cloud-Init allows you to configure the instance at boot time.
+    It can handle tasks like setting up users, installing packages, configuring network settings, and running scripts.
+    Support complex directives.
+
+User data:
+    It is broader use.
+    Applies to both windows and linux.
+    Support simpler directives scripts.
+
+Security Type:
+    It gives the option to choose depending upon the security requirement.
+
+    It consists of,
+        Standard:
+            It is common and most basic security measures like azure disk encryption.
+
+        Trusted VM:
+            It provides enhanced security feature through boot and VTPM (Virtual Trusted Platform Module)
+
+        Confidential VM:
+            It provides high level of security.
+            It ensure data is encrypted in transit, process and stored.
+
+Login to VM:
+    Using SSH:
+        ssh -i "pem-key" azureuser@public-ip-address
+
+Autoscaling:
+    
+
