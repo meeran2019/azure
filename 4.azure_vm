@@ -28,6 +28,9 @@ Login to VM:
     Using SSH:
         ssh -i "pem-key" azureuser@public-ip-address
 
-Autoscaling:
+VM Scale set:
+    It is autoscaling depends upon the lod.
+
     
+
 
