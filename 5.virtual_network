@@ -43,3 +43,12 @@ Load Balancer:
         Both load balancers, can be placed in Private subnet.
     
 --------------------------------------------------------------------------------------------------
+
+VNET Peering:
+
+    It is similar to AWS VPC peering.
+    It helps to connect two VNet in same or cross region.
+    It does not support transitive routing.
+    Using Virtual WAN, can support transitive routing.
+
+VNET Gateway:
