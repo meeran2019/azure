@@ -5,12 +5,22 @@ It is region specific.
 
 Limit is 1000 vnet per subscription and 1024 subnets per vnet.
 
-CIDR, SUBNET, Network SG.
+It consists of,
+
+    Virtual Network (VNET)  -   CIDR
+    Subnet 
+    Network Security group 
+    Application Security Group 
+    Azure Firewall
+    Route Table
+
+--------------------------------------------------------------------------------------------------
 
 Network Security Group:
     It allows inbound/outbound rules.
     Stateful.
-    
+    It is like combination of NACL & SG in AWS.
+
 Application Security Group:
     It helps to group the VM.
     Used within NSG to apply to group access.
@@ -23,5 +33,13 @@ Compare with AWS:
     Rules	                Allow/Deny rules with priority	        Allow rules only	            Allow/Deny rules with no priority
     Statefulness	        Stateful (tracks connections)	        Stateful (tracks connections)	Stateless (no tracking of connections)
 
-    NSG does both security group and NACL roles.
+--------------------------------------------------------------------------------------------------
 
+Load Balancer:
+
+    It consists of,
+        App Gateway -> Works on Layer 7 (ALB in AWS)  -> Support session affinity or sticky session.
+        Load Balancer -> Works on Layer 4 (NLB in AWS) -> Does not support session affinity or sticky session.
+        Both load balancers, can be placed in Private subnet.
+    
+--------------------------------------------------------------------------------------------------
