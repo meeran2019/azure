@@ -50,5 +50,30 @@ VNET Peering:
     It helps to connect two VNet in same or cross region.
     It does not support transitive routing.
     Using Virtual WAN, can support transitive routing.
+    It connects without any VPN.
 
 VNET Gateway:
+    It connects VNet to another vNet or onprem.
+    It used VPN or express route gateways.
+
+VPN Gateway:
+    It helps to connect Vnet to OnPrem.
+    It uses VPN.
+    
+--------------------------------------------------------------------------------------------------
+
+PRACTICAL:
+
+    1. Create the resource group.
+    2. Create the Virtual Network
+            a. Enable the Azure Firewall.
+            b. Enable the Azure Bastion which host to connect to VM with private IP address. Bastion host is created at VNET level.
+            c. Input CIDR range.
+    3. Create a VM
+            a. Select image, disk, NSG.
+            b. Can select or unselect public IP.
+            c. Once created, logged in using bastion and installed nginx.
+    4. Create a firewall collection and rules for DNAT.
+    5. Access the nginx site from browser.
+    
+--------------------------------------------------------------------------------------------------

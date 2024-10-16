@@ -21,6 +21,7 @@ Resource Groups:
     It is scoped to subscription level.
     Azure provides the ability to analyze and view costs at the resource group level, even though billing is aggregated at the subscription level.
     It is region specific.
+    Deleting the resource group will delete all the resources under the resource group.
 
 Resources:
     It is region specific.
@@ -47,5 +48,3 @@ Compare with AWS:
 PRACTICAL:
     If big organization, can generally use different accounts for different region like dev, qa & prod.
     If organization, have single account then create multiple subscription based on project, team, environment etc to isolate.
-
-    
