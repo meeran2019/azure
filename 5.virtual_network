@@ -77,3 +77,44 @@ PRACTICAL:
     5. Access the nginx site from browser.
     
 --------------------------------------------------------------------------------------------------
+
+Interview Questions:
+
+1. NSG vs ASG:
+    NSG applied at Subnet and Instance.
+    ASG helps to group VM.
+
+2. How to block from specific subnet to VM?
+    By default, within Vnet can communicate as inbound rules allowed.
+    Can create the another inbound rules with higher priority(100) and DENY action.
+
+3. Is NSG is stateful or stateless?
+    It is Stateful means no need of separate outbound allow.
+    If inbound is allowed then allow outbound.
+
+4. Difference of Azure firewall and NSG.
+    Firewall applied at VNET level.
+    NSG applied at subnet and instance level.
+
+5. Advantages of resource group?
+    It helps to group the resource.
+    Can group based on projects, teams.
+    Can manage life cycle like delete all resources under the resource group, tagging, control RBAC, Cost management, 
+    Resource locking, resource template.
+
+6. Azure user data vs custom data?
+    Azure custom data = AWS user data -> Can pass the script which can be executed during first runtime.
+    Custom data is used to pass the file which will be available throughout life cycle of instance. If using scaleset (Auto scaling), same file is available in all instances.
+
+7. Azure Application gateways vs Loadbalancer?
+    Application Gateway - like AWS ALB -> Operates on Layer 7 so support path based routing.
+    Loadbalancer - Like AWS NLB -> Operated on Layer 4.
+
+8. Azure bastion?
+    Secure remote access.
+    Reduced attack surface.
+    Simplified connectivity.
+    RBAC Control gives who can access.
+    Audit and Monitoring of bastion hosts.
+
+--------------------------------------------------------------------------------------------------
