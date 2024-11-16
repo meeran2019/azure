@@ -1,6 +1,123 @@
-Databricks
 
-    Unity catalog is region specific.
-    Allowed one metastore per region.
+Metastore are region specific.
+Allowed one metastore per region.
+
+
+Unity Catalog:
+    It helps to,
+        Access control
+        Metastore
+        User Management.
+
+    Under Metastore, can have multiple catalogs and inturn have multiple schema and inturn have multiple tables/views.
+
+    Workspace refer this centralized unity cataloq for all access management.
+
+
+To create a requirements:
+    1. User should have "AD Global Admin" permission.
+    2. Create a workspace.
+    3. Create a resource group.
+    4. Create a storage account. (Ensure heirarchial namespace enabled)
+    5. Create a Access Connector for Azure Databricks - it is used for connecting databricks with storage account (ADLS-Azure datalake storage) and managed identity.
+    6. In storage account, assign a permission for Access connector managed identity.
+
+
+To create a metastore:
+    1. Login to https://accounts.azuredatabricks.net
+    2. It shows workspace, data, user management.
+    3. Create a container for the metastore.
+    3. Create a metastore:
+            ADLS Gen 2 Path: container_name.storage_account.dfs.core.windows.net/  (/ refers root container and can give path also)
+            Access Connector ID: Resource ID of access connector.
+
+
+Assign a workspace to metastore:
+    Click metastore and select "Assign to" workspace.
+
+
+Create a Custer in workspace:
+    1. Create compute.
+    2. Select option for policy and access mode.
+
+
+Delta Sharing:
+    It helps to share data (tables) between two databricks account and non databricks account.
+    1. Unity catalog -> Data -> Metastore -> Configuration -> Enable delta sharing.
+    2. Create a recepient.
+            Generates the activation link and share it to consumer.
+    3. Create a new share.
+
+
+Create an external location:
+    How to access data stored in ADLS from databricks.
+    Databricks recommend to use external location to access container.
+    1. Create a storage account. (Enable heirarchial namespace)
+    2. Create a access connector
+    3. Give permission for access connector in storage account IAM.
+    4. Databricks workspace -> Catalog -> External data 
+    5. In external data -> Storage credentials -> Create credential.
+            Grant permission to storage credential
+    6. In external data -> external location 
+
+
+Use Azure AD as Identity Provider:
+    1. Login to account.azuredatabricks.net
+    2. Settings -> User provisioning -> setup user provisioning (get SCIM token and url)
+    3. In azure, select microsoft entra id.
+    4. Entra ID -> Enterprise application -> New application -> Search Azure Databricks SCIM 
+    5. Provisioning using the saved token and url.
+    6. In premium, can add users and provision it.
+
+
+Compute Resources:
+    Create a compute resource for SQL Warehouse and Cluster.
+    If workspace is attached to unity catalog, then sql warehouse also attached by default.
+    Workspace -> Create SQL warehouse.
+
+    Not all cluster can interact with unity catalog metadata.
+    Access mode and databricks version to consider.
+    Unity catalog wont support if enable credential passthrough.
+    Few lower versions doesnot support unity catalog.
+
+
+Unity Catalog Admin Roles:
+    Account Admin: 
+        Able to create workspace and metastore and assignment.
+        Account -> User management -> Users -> Roles
+
+    Metastore Admin:
+        Initially who create metastore and can assign user/groups.
+        It has full permission on metastore level.
+        Can create catalog.
     
+    Workspace Admin:
+        Workspaces -> workspace-name -> Permissions.
+        Access within the workspaces.
 
+
+Unity Catalog Lakehouse Federation:
+        Query federation enables to run databricks on external sources.
+        For example: to query from Azure SQL.
+
+        Workspace -> catalog -> External data -> Connections -> New connection.
+
+        When create a new catalog, have option to select connection.
+
+Integrate Databricks with github:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

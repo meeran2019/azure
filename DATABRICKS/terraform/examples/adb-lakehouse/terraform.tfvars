@@ -1,0 +1,5 @@
+spoke_resource_group_name = "lakehouse-rg"
+project_name = "lakehouse-project"
+environment_name = "sandbox"
+databricks_workspace_name = "lakehouse-workspace"
+key_vault_name = "lakehouse-keyvault"
