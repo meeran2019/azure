@@ -7,9 +7,38 @@ Under Metastore, can have multiple catalogs and inturn have multiple schema and 
 
 Workspace refer this centralized unity cataloq for all access management.
 
-To create Unity Catalog:
+To create a requirements:
     1. User should have "AD Global Admin" permission.
     2. Create a workspace.
     3. Create a resource group.
     4. Create a storage account. (Ensure heirarchial namespace enabled)
-    5. 
+    5. Create a Access Connector for Azure Databricks - it is used for connecting databricks with storage account (ADLS-Azure datalake storage) and managed identity.
+    6. In storage account, assign a permission for Access connector managed identity.
+    
+To create a metastore:
+    1. Login to https://accounts.azuredatabricks.net
+    2. It shows workspace, data, user management.
+    3. Create a container for the metastore.
+    3. Create a metastore:
+            ADLS Gen 2 Path: container_name.storage_account.dfs.core.windows.net/  (/ refers root container and can give path also)
+            Access Connector ID: Resource ID of access connector.
+
+Assign a workspace to metastore:
+    Click metastore and select "Assign to" workspace.
+
+Create a Custer in workspace:
+    1. Create compute.
+    2. Select option for policy and access mode.
+
+Delta Sharing:
+    It helps to share data (tables) between two databricks account and non databricks account.
+    1. Unity catalog -> Data -> Metastore -> Configuration -> Enable delta sharing.
+    2. Create a recepient.
+            Generates the activation link and share it to consumer.
+    3. Create a new share.
+    
+Create an external location;
+    
+
+
+    
