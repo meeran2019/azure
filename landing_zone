@@ -1,0 +1,66 @@
+Landing Zone:
+    Simply it is preconfigured environment.
+    Land our application or workloads in already setup zone.
+    It is empty subscription.
+    Azure uses foundational services like management group, firewall etc.
+    It supports governance, compliance, scalable etc.
+
+Importance of Landing Zone:
+    Security
+    Compliance
+    Scalability
+    Gives Framework
+    Cost
+
+Design Principles:
+    Subscription: Subscriptions are given easily based on environment, business, teams etc.
+    Policy Driven Governance: Using Azure Policy to guard rail.
+    Single control and management place.
+    Application centric service model.
+    Align with azure native services.
+
+------------------------------------------------------------------------------------------------
+
+DESIGN AREAS:
+
+Network Topology and Connectivity:
+    Can implement hub and spoke subscription.
+
+Identity and Access Management:
+    Enable MFA authentication.
+    Uses RBAC.
+    Integrate with AD.
+    Access Policy.
+
+Resource Organization:
+    Can group resource based on different teams, environment, geography.
+    Using tags.
+
+Governance and Compliance:
+    It helps to regulate resources.
+    Adhere to compliance.
+    To allow only specific VMS and specific regions etc.
+
+Operations Baseline:
+    Ability to monitor and health of the resources.
+
+Data Management:
+    How data is protected and follows regulatory compliance.
+    Data retention.
+    Data life cycle, management and security policy.
+
+Compute and Storage Scalability:
+    scalable
+
+Automation and DevOps:
+    Automate the places.
+    azure devops for ci/cd.
+
+------------------------------------------------------------------------------------------------
+
+Blue print:
+    It is like template which contains regource group, policy, RBAC or other ARM templates.
+    It is applied at subscription.
+    It is used for small scale.
+    For enterprise level, used the ARM template.
+    

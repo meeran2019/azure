@@ -55,6 +55,7 @@ VNET Peering:
 VNET Gateway:
     It connects VNet to another vNet or onprem.
     It used VPN or express route gateways.
+    It is similar to site to site vpn connection in aws.
 
 VPN Gateway:
     It helps to connect Vnet to OnPrem.
@@ -118,3 +119,4 @@ Interview Questions:
     Audit and Monitoring of bastion hosts.
 
 --------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,15 @@
+It helps to,
+    Access control
+    Metastore
+    User Management.
+
+Under Metastore, can have multiple catalogs and inturn have multiple schema and inturn have multiple tables/views.
+
+Workspace refer this centralized unity cataloq for all access management.
+
+To create Unity Catalog:
+    1. User should have "AD Global Admin" permission.
+    2. Create a workspace.
+    3. Create a resource group.
+    4. Create a storage account. (Ensure heirarchial namespace enabled)
+    5. 
